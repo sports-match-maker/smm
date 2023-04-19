@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Club\Models\Club;
+use App\Models\Club;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;

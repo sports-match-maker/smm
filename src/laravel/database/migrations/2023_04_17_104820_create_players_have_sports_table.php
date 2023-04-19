@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use App\Domain\PlayerSport\Models\PlayerSport;
+use App\Models\PlayerSport;
 
 return new class extends Migration
 {

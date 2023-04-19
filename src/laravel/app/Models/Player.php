@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Player\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,4 +21,17 @@ class Player extends Model
     const HAVE_CAR = 'have_car';
 
     const R_USER_ID = 'user_id';
+
+    protected $fillable = [
+        self::PHOTO,
+        self::LEVEL,
+        self::COMMENT,
+
+        self::SMOKER,
+        self::HEIGHT,
+        self::WIDTH,
+        self::BODY_TYPE,
+        self::DRINKER,
+        self::HAVE_CAR
+    ];
 }

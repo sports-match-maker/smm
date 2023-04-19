@@ -2,18 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Domain\Address\Models\Address;
-use App\Models\Club;
+use App\Models\Sport;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ClubSeeder extends Seeder
+class SportSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Club::factory(10)->create();
+        Sport::factory(5)->create();
     }
 }

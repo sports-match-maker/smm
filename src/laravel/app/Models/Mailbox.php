@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Mailbox\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -15,4 +15,10 @@ class Mailbox extends Model
 
     const R_SENDER_ID = 'sender_id';
     const R_RECIEVER_ID = 'reciver_id';
+
+    protected $fillable = [
+        self::MESSAGE,
+        self::SEND_AT,
+        self::MARK_AS_READ
+    ];
 }

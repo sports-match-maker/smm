@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Sport\Models\Sport;
+use App\Models\Sport;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;

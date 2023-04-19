@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Player\Enum;
+namespace App\Enums;
 
 enum PlayerLevelEnum : string
 {

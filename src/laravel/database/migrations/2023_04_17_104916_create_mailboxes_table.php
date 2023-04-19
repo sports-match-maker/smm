@@ -1,6 +1,6 @@
 <?php
 
-use App\Domain\Mailbox\Models\Mailbox;
+use App\Models\Mailbox;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

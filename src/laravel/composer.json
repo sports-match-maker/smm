@@ -28,10 +28,9 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Database\\Factories\\Domain": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "App\\Domain\\": "app/Domain",
-            "App\\Infrastructure\\": "app/Infrastructure"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
