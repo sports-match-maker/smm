@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Player extends Model
 {
@@ -22,6 +24,8 @@ class Player extends Model
 
     const R_USER_ID = 'user_id';
 
+    const R_SPORT_ID = 'sport_id';
+
     protected $fillable = [
         self::PHOTO,
         self::LEVEL,
@@ -34,4 +38,15 @@ class Player extends Model
         self::DRINKER,
         self::HAVE_CAR
     ];
+
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function sports(): BelongsToMany
+    {
+        return $this->belongsToMany(Sport::class);
+    }
 }

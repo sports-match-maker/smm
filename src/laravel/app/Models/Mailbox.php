@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Mailbox extends Model
 {
@@ -21,4 +22,16 @@ class Mailbox extends Model
         self::SEND_AT,
         self::MARK_AS_READ
     ];
+
+    public function senders(): HasMany
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function recivers(): HasMany
+    {
+        return $this->HasMany(User::class);
+    }
+
+
 }

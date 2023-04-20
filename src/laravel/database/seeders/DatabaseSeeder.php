@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             AddressSeeder::class,
-            SportSeeder::class,
-            ClubSeeder::class,
             PlayerSportSeeder::class,
+            ClubSeeder::class,
+            MailboxSeeder::class
         ]);
     }
 }

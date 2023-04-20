@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Player;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use App\Models\PlayerSport;
+use App\Models\Sport;
 
 return new class extends Migration
 {
@@ -15,11 +17,11 @@ return new class extends Migration
         Schema::create('players_have_sports', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger(PlayerSport::R_PLAYER_ID);
-            $table->unsignedBigInteger(PlayerSport::R_SPORT_ID);
+            $table->unsignedBigInteger(Sport::R_PLAYER_ID);
+            $table->unsignedBigInteger(Player::R_SPORT_ID);
 
-            $table->foreign(PlayerSport::R_PLAYER_ID)->references('id')->on('players')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign(PlayerSport::R_SPORT_ID)->references('id')->on('sports')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign(Sport::R_PLAYER_ID)->references('id')->on('players')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign(Player::R_SPORT_ID)->references('id')->on('sports')->onDelete('cascade')->onUpdate('cascade');
 
 
             $table->timestamps();

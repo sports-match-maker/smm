@@ -12,7 +12,7 @@ class SportFactory extends Factory
     public function definition(): array
     {
         return [
-            Sport::NAME => 'Footbal' . $this->faker->numberBetween(1, 1000)
+            Sport::NAME => fake()->name()
         ];
     }
 }

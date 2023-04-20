@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class User extends Model
 {
@@ -30,4 +32,24 @@ class User extends Model
     protected $hidden = [
         self::PASSWORD
     ];
+
+    public function player(): HasOne
+    {
+        return $this->hasOne(Player::class);
+    }
+
+    public function club(): HasOne
+    {
+        return $this->hasOne(Club::class);
+    }
+
+    public function senders(): BelongsToMany
+    {
+        return $this->belongsToMany(Mailbox::class, 'mailboxes', Mailbox::R_SENDER_ID);
+    }
+
+    public function recivers(): BelongsToMany
+    {
+        return $this->belongsToMany(Mailbox::class, 'mailboxes', Mailbox::R_RECIEVER_ID);
+    }
 }

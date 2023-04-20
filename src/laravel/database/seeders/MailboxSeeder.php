@@ -2,17 +2,16 @@
 
 namespace Database\Seeders;
 
-use App\Models\Sport;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Mailbox;
 use Illuminate\Database\Seeder;
 
-class SportSeeder extends Seeder
+class MailboxSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Sport::factory(10)->create();
+        Mailbox::factory(10)->create();
     }
 }
