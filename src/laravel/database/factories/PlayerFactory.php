@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Enums\PlayerBodyTypeEnum;
 use App\Enums\PlayerLevelEnum;
+use App\Models\Address;
 use App\Models\Player;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -24,7 +25,8 @@ class PlayerFactory extends Factory
             Player::DRINKER => fake()->boolean(),
             Player::HAVE_CAR => fake()->boolean(),
             Player::SMOKER => fake()->boolean(),
-            Player::R_USER_ID => User::factory()->create()->id
+            Player::R_USER_ID => User::factory()->create()->id,
+            Player::R_ADDRESS_ID => Address::factory()->create()->id
         ];
     }
 }

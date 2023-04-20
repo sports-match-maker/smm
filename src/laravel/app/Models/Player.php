@@ -23,8 +23,8 @@ class Player extends Model
     const HAVE_CAR = 'have_car';
 
     const R_USER_ID = 'user_id';
-
     const R_SPORT_ID = 'sport_id';
+    const R_ADDRESS_ID = 'address_id';
 
     protected $fillable = [
         self::PHOTO,

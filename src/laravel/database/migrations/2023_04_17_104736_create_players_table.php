@@ -28,6 +28,9 @@ return new class extends Migration
             $table->unsignedBigInteger(Player::R_USER_ID);
             $table->foreign(Player::R_USER_ID)->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->unsignedBigInteger(Player::R_ADDRESS_ID);
+            $table->foreign(Player::R_ADDRESS_ID)->references('id')->on('addresses')->onDelete('cascade')->onUpdate('cascade');
+
 
             $table->timestamps();
         });
