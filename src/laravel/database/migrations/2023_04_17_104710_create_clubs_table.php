@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string(Club::DESCRIPTION);
             $table->string(Club::PHOTO);
 
+            $table->string(Club::MAP_URL);
+
             $table->unsignedBigInteger(Club::R_ADDRESS_ID);
             $table->unsignedBigInteger(Club::R_SPORT_ID);
             $table->unsignedBigInteger(Club::R_USER_ID);

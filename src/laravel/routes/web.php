@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Address;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
@@ -19,10 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-
     // if(Cache::get('name') === null) {
     //     Cache::set('name', 'nanorocks');
     // }
 
-    return Cache::get('name');
+    // return Cache::get('name');
 });

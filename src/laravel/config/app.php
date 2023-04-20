@@ -193,17 +193,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-
-        /**
-         * Domain Service providers
-         */
-        App\Providers\AddressServiceProvider::class,
-        App\Providers\ClubServiceProvider::class,
-        App\Providers\MailboxServiceProvider::class,
-        App\Providers\PlayerServiceProvider::class,
-        App\Providers\SportServiceProvider::class,
-        App\Providers\UserServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class
     ],
 
     /*

@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Club extends Model
@@ -17,6 +16,7 @@ class Club extends Model
     const PHONE = 'phone';
     const DESCRIPTION = 'description';
     const PHOTO = 'photo';
+    const MAP_URL = 'map_url';
 
     const R_ADDRESS_ID = 'address_id';
     const R_SPORT_ID = 'sport_id';
@@ -27,7 +27,8 @@ class Club extends Model
         self::WEBSITE,
         self::PHONE,
         self::DESCRIPTION,
-        self::PHOTO
+        self::PHOTO,
+        self::MAP_URL
     ];
 
     public function user(): BelongsTo
@@ -40,9 +41,9 @@ class Club extends Model
         return $this->hasOne(Address::class);
     }
 
-    public function sports(): HasMany
+    public function sports(): hasOne
     {
-        return $this->hasMany(Sport::class);
+        return $this->hasOne(Sport::class);
     }
 
 }

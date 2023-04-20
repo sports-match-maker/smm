@@ -19,6 +19,7 @@ class ClubFactory extends Factory
             Club::WEBSITE => fake()->url(),
             Club::PHONE => fake()->phoneNumber(),
             Club::DESCRIPTION => fake()->text(200),
+            Club::MAP_URL => fake()->url(),
             Club::PHOTO => 'https://placehold.co/600x400',
             Club::R_ADDRESS_ID => Address::factory()->create()->id,
             Club::R_SPORT_ID => Sport::factory()->create()->id,

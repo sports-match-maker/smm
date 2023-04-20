@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Sport extends Model
 {
@@ -19,13 +19,13 @@ class Sport extends Model
         self::NAME
     ];
 
-    public function club(): BelongsTo
+    public function clubs(): HasMany
     {
-        return $this->belongsTo(Club::class);
+        return $this->hasMany(Club::class);
     }
 
-    public function sports(): BelongsToMany
+    public function players(): BelongsToMany
     {
-        return $this->belongsToMany(Players::class);
+        return $this->belongsToMany(Player::class, 'players_have_sports');
     }
 }
