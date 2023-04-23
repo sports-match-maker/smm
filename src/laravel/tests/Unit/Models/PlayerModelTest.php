@@ -16,7 +16,7 @@ class PlayerModelTest extends TestCase
     /**
      * Test to get the top 10 latest created profiles of players.
      */
-    public function testGetTop10LatestCreatedProfilesOfPlayers(): void
+    public function test_get_top_10_latest_created_profiles_of_players(): void
     {
         Player::factory(10)->create()->each(function ($player) {
             $sport = Sport::factory()->create();
@@ -35,7 +35,7 @@ class PlayerModelTest extends TestCase
     /**
      * Test to search players by first name or last name.
      */
-    public function testSearchPlayersByFirstNameOrLastName(): void
+    public function test_search_players_by_first_name_or_last_name(): void
     {
         $player = Player::factory([
             Player::R_USER_ID => User::factory([
@@ -59,7 +59,7 @@ class PlayerModelTest extends TestCase
     /**
      * Test to search players by sport or address.
      */
-    public function testSearchPlayersBySportOrAddress(): void
+    public function test_search_players_by_sport_or_address(): void
     {
         $address = Address::factory([
             Address::CITY => 'Skopje',
