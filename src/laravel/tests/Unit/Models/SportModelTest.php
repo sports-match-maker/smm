@@ -15,7 +15,6 @@ class SportModelTest extends TestCase
      */
     public function test_popular_sports_count_players(): void
     {
-
         Player::factory(2)->create()->each(function ($player) {
             $sport = Sport::factory()->create();
 

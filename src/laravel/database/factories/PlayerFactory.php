@@ -26,7 +26,7 @@ class PlayerFactory extends Factory
             Player::HAVE_CAR => fake()->boolean(),
             Player::SMOKER => fake()->boolean(),
             Player::R_USER_ID => User::factory()->create()->id,
-            Player::R_ADDRESS_ID => Address::factory()->create()->id
+            Player::R_ADDRESS_ID => Address::factory()->create()->id,
         ];
     }
 }
