@@ -11,7 +11,9 @@ use Tests\TestCase;
 class SportModelTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Test to count sports by popular players
+     *
+     * @return void
      */
     public function test_popular_sports_count_players(): void
     {
@@ -35,6 +37,11 @@ class SportModelTest extends TestCase
         }));
     }
 
+    /**
+     * Test to count sports for popular sports
+     *
+     * @return void
+     */
     public function test_popular_sports_count_clubs(): void
     {
         Club::factory(10)->create();

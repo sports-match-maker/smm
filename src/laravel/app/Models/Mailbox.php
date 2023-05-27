@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Mailbox extends Model
@@ -18,6 +19,8 @@ class Mailbox extends Model
     const R_RECIEVER_ID = 'reciver_id';
 
     protected $fillable = [
+        self::R_RECIEVER_ID,
+        self::R_SENDER_ID,
         self::MESSAGE,
         self::SEND_AT,
         self::MARK_AS_READ
@@ -25,12 +28,12 @@ class Mailbox extends Model
 
     public function senders(): HasMany
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class, 'id', self::R_SENDER_ID);
     }
 
     public function recivers(): HasMany
     {
-        return $this->HasMany(User::class);
+        return $this->hasMany(User::class, 'id', self::R_RECIEVER_ID);
     }
 
 

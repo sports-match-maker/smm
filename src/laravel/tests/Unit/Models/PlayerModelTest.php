@@ -34,6 +34,8 @@ class PlayerModelTest extends TestCase
 
     /**
      * Test to search players by first name or last name.
+     *
+     * @return void
      */
     public function test_search_players_by_first_name_or_last_name(): void
     {
@@ -58,6 +60,8 @@ class PlayerModelTest extends TestCase
 
     /**
      * Test to search players by sport or address.
+     *
+     * @return void
      */
     public function test_search_players_by_sport_or_address(): void
     {
